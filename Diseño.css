@@ -1,0 +1,591 @@
+/* Establece el estilo general del HTML */
+html {
+	margin: 0; /* Elimina el margen predeterminado */
+	padding: 0; /* Elimina el padding predeterminado */
+	font-family: "Roboto", Arial; /* Usa la fuente Roboto, o Arial como alternativa */
+	overflow-x: hidden; /* Evita el desplazamiento horizontal */
+}
+
+/* Establece los estilos para el cuerpo de la página */
+body {
+	margin: 0; /* Elimina el margen predeterminado */
+	padding: 0px; /* Elimina el padding */
+	background-image: none; /* No utiliza imagen de fondo */
+}
+
+/* Estilos del logo */
+.Logo {
+    margin-right: 100px; /* Margen derecho para alinear el logo */
+}
+.Logo img {
+	height: 76px; /* Define la altura de la imagen del logo */
+	width: auto; /* Mantiene la proporción original de la imagen */
+}
+
+/* Estilos generales para la barra de navegación */
+.navbar {
+	width: 100%; /* Ocupa todo el ancho */
+	padding: 5px 0; /* Espaciado arriba y abajo */
+	position: fixed; /* Se fija en la parte superior */
+	top: 0; /* Se fija en la parte superior */
+    left: 0; /* Alineada a la izquierda */
+    z-index: 1000; /* Se asegura que la barra esté en la capa superior */
+	background-color: rgba(248, 246, 246, 0.95); /* Fondo semitransparente */
+	box-sizing: border-box; /* Incluye padding y border en las dimensiones */
+	display: flex; /* Usa flexbox para alinear el contenido */
+	align-items: center; /* Centra verticalmente */
+	justify-content: space-between; /* Espacio entre los elementos */
+}
+
+/* Contenedor dentro de la barra de navegación */
+.navbar .contenido {
+	display: flex; /* Diseño en línea flexible */
+	justify-content: space-between; /* Distribuye los elementos */
+	align-items: center; /* Alinea los elementos verticalmente */
+	max-width: 100px; /* Limita el ancho máximo */
+	margin: 0 auto; /* Centra el contenido horizontalmente */
+	width: 100%; /* El ancho es el 100% */
+	padding: 0 20px; /* Espaciado interno */
+	box-sizing: border-box; /* Incluye padding en las dimensiones */
+}
+
+/* Estilos del contenedor de las opciones del menú (barra de enlaces) */
+.bars {
+	flex: 1; /* Flexibilidad del contenedor */
+	display: flex; /* Diseño flexible */
+	justify-content: space-between; /* Espacio entre los elementos del menú */
+}
+
+/* Lista no ordenada dentro de la barra de navegación */
+.bars ul {
+	display: flex; /* Los elementos de la lista se muestran en línea */
+	align-items: center; /* Alinea verticalmente */
+	list-style: none; /* Elimina los puntos de la lista */
+	width: auto; /* Ancho automático */
+	justify-content: start; /* Alinea al inicio */
+	padding: 0; /* Sin espaciado interno */
+	margin: 0; /* Sin margen externo */
+}
+
+/* Estilos de los elementos de la lista */
+.bars ul li {
+	position: relative; /* Para posicionar el submenú de manera absoluta */
+	margin-right: 30px; /* Espaciado entre los elementos de la lista */
+}
+
+/* Estilos para los enlaces dentro de los elementos de la lista */
+.bars ul li a {
+	text-decoration: none; /* Elimina el subrayado de los enlaces */
+	color: #000000; /* Color negro del texto */
+	transition: color 0.3s; /* Transición suave del color */
+	text-transform: uppercase; /* Transforma el texto a mayúsculas */
+	font-size: 14px; /* Tamaño de fuente */
+}
+
+/* Estilos para el hover de los enlaces */
+.bars ul li a:hover {
+	color: #05a; /* Cambia el color al pasar el mouse */
+}
+
+/* Estilos del submenú */
+.navbar .bars ul li .submenu {
+    display: none; /* El submenú está oculto por defecto */
+    position: absolute; /* Posicionado respecto al li */
+	top: 100%; /* Colocado debajo del elemento li */
+    left: 0; /* Alineado a la izquierda */
+    background-color: rgba(248, 246, 246, 0.98); /* Fondo semitransparente */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); /* Sombra del submenú */
+    z-index: 1001; /* Asegura que el submenú esté por encima */
+	box-sizing: border-box; /* Incluye el padding y borde en las dimensiones */
+    width: 200px; /* Ancho fijo del submenú */
+}
+
+/* Muestra el submenú al pasar el ratón sobre el elemento li */
+.navbar .bars ul li:hover .submenu {
+    display: block; /* Muestra el submenú */
+}
+
+/* Estilos de los elementos de la lista dentro del submenú */
+.navbar .bars ul li .submenu li {
+    width: 100%; /* El submenú ocupa todo el ancho */
+}
+
+/* Estilos de los enlaces dentro del submenú */
+.navbar .bars ul li .submenu li a {
+    padding: 10px; /* Espaciado interno */
+    display: block; /* Se muestran en bloque */
+    color: #000; /* Color del texto */
+    text-decoration: none; /* Elimina subrayado */
+}
+
+/* Hover en los enlaces del submenú */
+.navbar .bars ul li .submenu li a:hover {
+    background-color: #f8f8f8; /* Fondo gris claro al pasar el ratón */
+}
+
+/* Estilos del buscador */
+.search-bar {
+	display: flex; /* Diseño en línea flexible */
+	justify-content: flex-end; /* Alineado a la derecha */
+	align-items: center; /* Centrado vertical */
+	margin-left: 20px; /* Espacio a la izquierda */
+}
+
+/* Formulario del buscador */
+.search-bar form {
+    display: flex; /* Flexbox para alinear los elementos */
+    align-items: center;	
+}
+
+/* Campo de texto del buscador */
+.search-bar input[type="text"] {
+    padding: 8px; /* Espaciado interno */
+	border: 1px solid #ccc; /* Borde gris */
+	width: 260px; /* Ancho inicial */
+	height: 10px; /* Altura */
+}
+
+/* Estilos al hacer foco en el campo de texto */
+.search-bar input[type="text"]:focus {
+	width: 300px; /* Ancho del campo de texto aumenta */
+}
+
+/* Botón del buscador */
+.search-bar button {
+    padding: 8px 12px; /* Espaciado del botón */
+    background-color: transparent; /* Fondo transparente */
+    color: black; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer; /* Cursor de mano */
+    font-size: 16px; /* Tamaño del texto */
+}
+
+/* Hover en el botón del buscador */
+.search-bar button:hover {
+    background-color: #05a;  /* Color azul al pasar el ratón */
+}
+
+
+.conteiner{
+	position: relative;
+	padding-top: 70px;
+	justify-content: center;
+}
+.slider-wrapper{
+	position: relative;
+	max-width: 1024px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 10px;	
+}
+.slider{
+	display: flex;
+	aspect-ratio: 70 / 30;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	box-shadow: 0 1.5rem 3rem rgb(0, 0, 0, 0.75);
+	border-radius: 0.5rem;
+}
+.slider::-webkit-scrollbar{
+	display: none;
+}
+.slider img{
+	object-fit: cover;
+	width: 100%;
+	height: 500px;
+	flex-shrink: 0;
+}
+.slider-nav{
+	display: flex;
+	column-gap: 1rem;
+	position: absolute;
+	bottom: 1.25rem;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+.slider-nav a{
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: #ffffff;
+	opacity: 0.75;
+	transition: opacity ease 200px;
+}
+.slider.nav a:hover{
+	opacity: 1;
+}
+.slider-nav-left, .slider-nav-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    color: black;
+    font-size: 24px;
+}
+
+.slider-nav-left {
+    left: 10px;
+}
+
+.slider-nav-right {
+    right: 10px;
+}
+
+
+
+.categoria-container {
+    width: 80%;
+    margin: 20px auto;
+}
+.categoria-container h2 {
+    text-align: center;
+    margin-top: 50px; 
+	margin-bottom: 20px;
+}
+.categoria-cards {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten y envuelvan según el ancho del contenedor */
+    justify-content: space-between; /* Esto distribuye el espacio uniformemente entre las tarjetas */
+    gap: 10px;
+}
+.categoria-content {
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+	z-index: 2; 
+    background: rgba(0, 0, 0, 0.5);
+}
+.categoria-card {
+    width: 30%;
+    background-color: #00A1E4;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    height: 500px; 
+}
+.categoria-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+.categoria-btn {
+    position: absolute;
+    bottom: -50px; 
+    left: 0;
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 0; 
+    text-align: center;
+    transition: bottom 0.5s ease; 
+}
+.categoria-card:hover .categoria-btn {
+	bottom: 0;
+}
+
+
+
+/* Contenedor principal para la sección del slider */
+.conteiner {
+    position: relative; /* Permite posicionar elementos dentro de este contenedor */
+    padding-top: 70px; /* Espacio superior para no solapar el contenido fijo */
+    justify-content: center; /* Centra el contenido en el eje horizontal */
+}
+
+/* Contenedor del slider */
+.slider-wrapper {
+    position: relative; /* Permite posicionar elementos dentro de este contenedor */
+    max-width: 1024px; /* Ancho máximo del slider */
+    margin: 0 auto; /* Centra el slider horizontalmente */
+    overflow: hidden; /* Oculta el contenido que excede el tamaño del contenedor */
+    padding-top: 10px; /* Espacio superior */
+}
+
+/* Estilo del slider, que se comporta como un contenedor flexible */
+.slider {
+    display: flex; /* Utiliza flexbox para alinear las imágenes */
+    aspect-ratio: 70 / 30; /* Relación de aspecto del slider */
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+    scroll-snap-type: x mandatory; /* Facilita el "snapping" al desplazarse */
+    scroll-behavior: smooth; /* Transiciones suaves al desplazarse */
+    box-shadow: 0 1.5rem 3rem rgb(0, 0, 0, 0.75); /* Sombra para efecto de profundidad */
+    border-radius: 0.5rem; /* Bordes redondeados */
+}
+
+/* Oculta la barra de desplazamiento en navegadores webkit */
+.slider::-webkit-scrollbar {
+    display: none; /* No se muestra la barra de desplazamiento */
+}
+
+/* Estilo de las imágenes dentro del slider */
+.slider img {
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    width: 100%; /* Imágenes ocupan todo el ancho del contenedor */
+    height: 500px; /* Altura fija para las imágenes */
+    flex-shrink: 0; /* Previene que las imágenes se reduzcan */
+}
+
+/* Contenedor para los indicadores de navegación del slider */
+.slider-nav {
+    display: flex; /* Utiliza flexbox para alinear los indicadores */
+    column-gap: 1rem; /* Espacio entre los indicadores */
+    position: absolute; /* Posiciona el contenedor de indicadores de forma absoluta */
+    bottom: 1.25rem; /* Ubicación desde el fondo del slider */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Ajusta el centrado */
+    z-index: 1; /* Asegura que los indicadores estén por encima del contenido */
+}
+
+/* Estilo para cada indicador de navegación */
+.slider-nav a {
+    width: 0.5rem; /* Ancho de los indicadores */
+    height: 0.5rem; /* Alto de los indicadores */
+    border-radius: 50%; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo blanco */
+    opacity: 0.75; /* Opacidad inicial */
+    transition: opacity ease 200px; /* Transición suave para la opacidad */
+}
+
+/* Efecto hover para los indicadores */
+.slider.nav a:hover {
+    opacity: 1; /* Aumenta la opacidad al pasar el ratón */
+}
+
+/* Estilo para las flechas de navegación (izquierda y derecha) */
+.slider-nav-left, .slider-nav-right {
+    position: absolute; /* Posiciona las flechas de forma absoluta */
+    top: 50%; /* Coloca las flechas verticalmente al centro */
+    transform: translateY(-50%); /* Ajusta el centrado vertical */
+    z-index: 10; /* Asegura que las flechas estén por encima del contenido */
+    border: none; /* Quita el borde de los botones */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    padding: 10px; /* Añade un pequeño relleno interno a las flechas */
+    color: black; /* Color negro para las flechas */
+    font-size: 24px; /* Tamaño de la fuente de las flechas */
+}
+
+/* Posiciona la flecha izquierda */
+.slider-nav-left {
+    left: 10px; /* Ubicación desde el borde izquierdo */
+}
+
+/* Posiciona la flecha derecha */
+.slider-nav-right {
+    right: 10px; /* Ubicación desde el borde derecho */
+}
+
+/* Contenedor para las categorías */
+.categoria-container {
+    width: 80%; /* Ancho del contenedor de categorías */
+    margin: 20px auto; /* Espacio superior e inferior, centrado horizontalmente */
+}
+
+/* Estilo para el título de la sección de categorías */
+.categoria-container h2 {
+    text-align: center; /* Centra el texto */
+    margin-top: 50px; /* Espacio superior */
+    margin-bottom: 20px; /* Espacio inferior */
+}
+
+/* Contenedor para las tarjetas de categorías */
+.categoria-cards {
+    display: flex; /* Utiliza flexbox para alinear las tarjetas */
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten y envuelvan según el ancho del contenedor */
+    justify-content: space-between; /* Distribuye el espacio uniformemente entre las tarjetas */
+    gap: 10px; /* Espacio entre las tarjetas */
+}
+
+/* Contenedor del contenido de cada categoría */
+.categoria-content {
+    position: relative; /* Permite posicionar elementos dentro de este contenedor */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    display: flex; /* Utiliza flexbox para alinear los elementos internos */
+    flex-direction: column; /* Alinea los elementos en columna */
+    justify-content: flex-end; /* Alinea el contenido al final del contenedor */
+    z-index: 2; /* Asegura que el contenido esté por encima del fondo */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+/* Estilo para cada tarjeta de categoría */
+.categoria-card {
+    width: 30%; /* Ancho de la tarjeta */
+    background-color: #00A1E4; /* Color de fondo de la tarjeta */
+    color: white; /* Color del texto */
+    position: relative; /* Permite posicionar elementos dentro de la tarjeta */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre la tarjeta */
+    overflow: hidden; /* Oculta contenido que sobresale */
+    height: 500px; /* Altura fija para las tarjetas */
+}
+
+/* Estilo para la imagen de cada tarjeta de categoría */
+.categoria-image {
+    width: 100%; /* Ancho completo de la tarjeta */
+    height: 100%; /* Altura completa de la tarjeta */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    position: absolute; /* Posiciona la imagen de forma absoluta dentro de la tarjeta */
+    top: 0; /* Ubicación superior */
+    left: 0; /* Ubicación izquierda */
+    z-index: 1; /* Asegura que la imagen esté por debajo del contenido */
+}
+
+/* Botón que aparece en cada tarjeta de categoría */
+.categoria-btn {
+    position: absolute; /* Posiciona el botón de forma absoluta dentro de la tarjeta */
+    bottom: -50px; /* Inicialmente fuera de la vista */
+    left: 0; /* Ubicación izquierda */
+    width: 100%; /* Ancho completo de la tarjeta */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: white; /* Color del texto */
+    padding: 10px 0; /* Relleno superior e inferior */
+    text-align: center; /* Centra el texto */
+    transition: bottom 0.5s ease; /* Transición suave al aparecer */
+}
+
+/* Efecto hover para mostrar el botón */
+.categoria-card:hover .categoria-btn {
+    bottom: 0; /* Cuando el ratón pasa por encima, el botón sube */
+}
+
+/* Contenedor para los elementos del carrusel */
+.carrusel-items {
+    display: flex; /* Utiliza flexbox para alinear los elementos del carrusel */
+    transition: transform 0.5s ease; /* Transición suave para el movimiento */
+    width: calc(6 * 25%); /* Ancho total calculado basado en 6 elementos (cada uno del 25%) */
+}
+
+/* Estilo para el título de la sección de deportes */
+.deportes h2 {
+    width: 100%; /* Asegura que el h2 ocupe todo el ancho del contenedor */
+    text-align: center; /* Centra el texto */
+    display: block; /* Cambia flex por block si solo quieres centrar el texto horizontalmente */
+    margin: 50px 0 20px; /* Espacio superior e inferior */
+}
+
+/* Estilo para cada tarjeta de deporte */
+.deporte-card {
+    width: 30%; /* Ancho de la tarjeta */
+    height: 350px; /* Altura fija para las tarjetas */
+    padding: 20px; /* Relleno interno */
+    margin: 15px; /* Espacio alrededor de la tarjeta */
+    overflow: hidden; /* Oculta contenido que sobresale */
+    text-align: center; /* Centra el texto */
+    box-sizing: border-box; /* Incluye el relleno y borde en el tamaño total */
+    position: relative; /* Permite posicionar elementos dentro de la tarjeta */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre la tarjeta */
+    transition: transform 0.5s ease; /* Transición suave para efectos */
+}
+
+/* Estilo para la imagen de cada tarjeta de deporte */
+.deporte-card img {
+    width: 100%; /* Ancho completo de la tarjeta */
+    height: 100%; /* Altura completa de la tarjeta */
+    display: block; /* Elimina cualquier espacio extra alrededor de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+    transition: 0.3s ease; /* Transición suave para la imagen */
+}
+
+/* Capa oscura sobre la tarjeta de deporte */
+.deporte-card::before {
+    content: ''; /* Crea un elemento antes del contenido */
+    position: absolute; /* Posiciona la capa de forma absoluta */
+    top: 0; /* Ubicación superior */
+    left: 0; /* Ubicación izquierda */
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Altura completa */
+    background-color: rgba(0, 0, 0, 0.4); /* Oscurecer imagen */
+    z-index: 1; /* Asegura que la capa esté por encima de la imagen */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color */
+}
+
+/* Efecto hover para oscurecer más la tarjeta */
+.deporte-card:hover::before {
+    background-color: rgba(0, 0, 0, 0.6); /* Oscurecer más al hacer hover */
+}
+
+/* Contenido dentro de cada tarjeta de deporte */
+.deporte-content {
+    position: relative; /* Permite posicionar elementos dentro de este contenedor */
+    z-index: 2; /* Asegura que el contenido esté sobre la imagen */
+    color: white; /* Color del texto */
+    font-size: 24px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+    display: flex; /* Utiliza flexbox para alinear los elementos internos */
+    flex-direction: column; /* Alinea el contenido en columna */
+    justify-content: flex-end; /* Alinea el contenido al final del contenedor */
+}
+
+/* Estilos para el carrusel basado en checkboxes */
+#deporte1:checked ~ .carrusel-items {
+    transform: translateX(0%); /* Mueve el carrusel a la primera posición */
+}
+#deporte2:checked ~ .carrusel-items {
+    transform: translateX(-100%); /* Mueve el carrusel a la segunda posición */
+}
+#deporte3:checked ~ .carrusel-items {
+    transform: translateX(-200%); /* Mueve el carrusel a la tercera posición */
+}
+
+/* Botón que aparece en las tarjetas de deporte */
+.descubre-btn {
+    position: absolute; /* Posiciona el botón de forma absoluta dentro de la tarjeta */
+    left: 0; /* Ubicación izquierda */
+    right: 0; /* Ubicación derecha */
+    bottom: -50px; /* Inicialmente fuera de la vista */
+    background-color: rgba(0, 0, 0, 0.7); /* Botón semitransparente */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Quita el subrayado */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 50px; /* Altura del botón */
+    transition: bottom 0.5s ease; /* Transición suave para la aparición del botón */
+    z-index: 2; /* Asegura que el botón esté por encima del contenido */
+    font-size: 18px; /* Tamaño de la fuente del botón */
+}
+
+/* Efecto hover para mostrar el botón */
+.deporte-card:hover .descubre-btn {
+    bottom: 0; /* Cuando el ratón pase por encima, el botón sube */
+}
+
+/* Efecto hover para aumentar la imagen en las tarjetas de deporte */
+.deporte-card:hover img {
+    transform: scale(1.05); /* Aumenta ligeramente la escala de la imagen al hacer hover */
+}
+
+/* Estilo de las flechas de navegación en el slider */
+.slider-left {
+    left: 10px; /* Ubicación desde el borde izquierdo */
+}
+
+.slider-right {
+    right: 10px; /* Ubicación desde el borde derecho */
+}
+
+/* Estilo común para las flechas de navegación (izquierda y derecha) */
+.slider-left, .slider-right {
+    position: absolute; /* Posiciona las flechas de forma absoluta */
+    top: 50%; /* Coloca las flechas verticalmente al centro */
+    transform: translateY(-50%); /* Ajusta el centrado vertical */
+    z-index: 10; /* Asegura que las flechas estén por encima del contenido */
+    border: none; /* Quita el borde de los botones */
+    cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+    padding: 10px; /* Añade un pequeño relleno interno a las flechas */
+    color: black; /* Color negro para las flechas */
+    font-size: 24px; /* Tamaño de la fuente de las flechas */
+}

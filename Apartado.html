@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Declara el tipo de documento como HTML5 y el idioma del documento como español -->
+<head>
+	<meta charset="UTF-8"> <!-- Define la codificación de caracteres como UTF-8, compatible con todos los caracteres -->
+	<title>ZEN SPORT</title> <!-- Título de la página web que aparecerá en la pestaña del navegador -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet"> 
+    <!-- Enlace para importar la fuente "Roboto" desde Google Fonts -->
+    <link rel="stylesheet" href="./Diseño.css"> 
+    <!-- Enlace a una hoja de estilos CSS externa (Diseño.css) para personalizar la apariencia de la página -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <!-- Metaetiqueta para hacer que el diseño sea responsivo, ajustando el ancho de la página al dispositivo -->
+</head>
+
+<nav class="navbar"> <!-- Inicia una barra de navegación con la clase "navbar" para estilizarla -->
+    <div class="logo"> <!-- Contenedor para el logotipo -->
+        <a href="" class="Logo"><img src="./img.logo/3124e5d8-7444-49f4-9b9d-d4c56b8919f6.jfif" alt="Logo"></a>
+        <!-- Enlace al logo de la empresa "ZEN SPORT" con una imagen -->
+    </div>
+    
+    <div class="bars"> <!-- Contenedor para los elementos de la barra de menú -->
+        <ul> <!-- Lista desordenada para las opciones de navegación principales -->
+            <li><a href="#">Inicio</a></li> <!-- Opción de "Inicio" -->
+            
+            <!-- Menú desplegable para la categoría "Mujer" con submenú -->
+            <li>
+                <a href="#">Mujer</a>
+                <ul class="submenu">
+                    <li><a href="#">Blusas</a></li>
+                    <li><a href="#">Faldas</a></li>
+                    <li><a href="#">Pantalones</a></li>
+                </ul>
+            </li>
+
+            <!-- Menú desplegable para la categoría "Hombre" con submenú -->
+            <li>
+                <a href="#">Hombre</a>
+                <ul class="submenu">
+                    <li><a href="#">Camisas</a></li>
+                    <li><a href="#">Pantalones</a></li>
+                    <li><a href="#">Zapatos</a></li>
+                </ul>
+            </li>
+
+            <!-- Menú desplegable para la categoría "Niños" con submenú -->
+            <li>
+                <a href="#">Niños</a>
+                <ul class="submenu">
+                    <li><a href="#">Camisetas</a></li>
+                    <li><a href="#">Shorts</a></li>
+                    <li><a href="#">Zapatos</a></li>
+                </ul>
+            </li>
+
+            <!-- Menú desplegable para la categoría "Deporte" con submenú -->
+            <li>
+                <a href="#">Deporte</a>
+                <ul class="submenu">
+                    <li><a href="#">Ropa deportiva</a></li>
+                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Calzado deportivo</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Barra de búsqueda -->
+    <div class="search-bar">
+        <form>
+            <input type="text" placeholder="Buscar..."> <!-- Campo de texto para búsqueda -->
+            <button type="submit">l</button> <!-- Botón de envío para la búsqueda -->
+        </form>
+    </div>
+</nav>
+
+<!-- Sección que contiene un slider/carrusel de imágenes -->
+<section class="conteiner">
+    <div class="slider-wrapper"> <!-- Contenedor del slider -->
+        <div class="slider"> <!-- Contenedor para las imágenes del carrusel -->
+            <img id="slider-1" src="img.carrusel/img1.jfif" alt=""> <!-- Primera imagen del slider -->
+            <img id="slider-2" src="img.carrusel/img2.jfif" alt=""> <!-- Segunda imagen del slider -->
+        </div>
+
+        <!-- Navegación por puntos (o círculos) para moverse entre imágenes del slider -->
+        <div class="slider-nav">
+            <a href="#slider-1"></a> <!-- Enlace al primer slider -->
+            <a href="#slider-2"></a> <!-- Enlace al segundo slider -->
+        </div>
+
+        <!-- Flechas de navegación del carrusel -->
+        <div>
+            <a href="#" class="slider-nav-left">&#10094;</a> <!-- Flecha izquierda -->
+            <a href="#" class="slider-nav-right">&#10095;</a> <!-- Flecha derecha -->
+        </div>
+    </div>
+</section>
+
+<!-- Sección de categorías de productos -->
+<div class="categoria-container">
+    <h2>Compra por Categoría</h2> <!-- Título de la sección -->
+    <div class="categoria-cards"> <!-- Contenedor de las tarjetas de categorías -->
+        
+        <!-- Tarjeta para la categoría "Mujer" -->
+        <div class="categoria-card" onclick="window.location.href='';">
+            <img src="./img.categorias M-H-N/cmujer.jfif" alt="Colección Mujer" class="categoria-image">
+            <div class="categoria-content">
+                <h3>Mujer</h3>
+                <div class="categoria-btn">Descubre</div> <!-- Botón de descubrir más productos -->
+            </div>
+        </div>
+
+        <!-- Tarjeta para la categoría "Hombre" -->
+        <div class="categoria-card" onclick="window.location.href='';">
+            <img src="./img.categorias M-H-N/chombre.jpeg" alt="Colección Hombre" class="categoria-image">
+            <div class="categoria-content">
+                <h3>Hombre</h3>
+                <div class="categoria-btn">Descubre</div> <!-- Botón de descubrir más productos -->
+            </div>
+        </div>
+
+        <!-- Tarjeta para la categoría "Niños" -->
+        <div class="categoria-card" onclick="window.location.href='';">
+            <img src="./img.categorias M-H-N/cniño.jpeg" alt="Colección Niños" class="categoria-image">
+            <div class="categoria-content">
+                <h3>Niños</h3>
+                <div class="categoria-btn">Descubre</div> <!-- Botón de descubrir más productos -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Sección de categorías deportivas -->
+<section class="deportes">
+    <h2>COMPRA POR DEPORTE</h2> <!-- Título de la sección -->
+    <div class="carrusel"> <!-- Carrusel para las categorías deportivas -->
+        
+        <!-- Radio buttons para controlar la navegación en el carrusel -->
+        <input type="radio" name="carrusel" id="deporte1" checked> <!-- Control del primer deporte -->
+        <input type="radio" name="carrusel" id="deporte2"> <!-- Control del segundo deporte -->
+        <input type="radio" name="carrusel" id="deporte3"> <!-- Control del tercer deporte -->
+        <input type="radio" name="carrusel" id="deporte4"> <!-- Control del cuarto deporte -->
+        <input type="radio" name="carrusel" id="deporte5"> <!-- Control del quinto deporte -->
+        <input type="radio" name="carrusel" id="deporte6"> <!-- Control del sexto deporte -->
+        
+        <!-- Elementos del carrusel de deportes -->
+        <div class="carrusel-items">
+            <!-- Tarjeta de Fútbol -->
+            <div class="deporte-card">
+                <img src="./img.categorias F-B-T-C-V/FUTBOL.jfif" alt="Fútbol">
+                <div class="deporte futbol">
+                    <h3>FÚTBOL</h3>
+                </div>
+                <a href="futbol.html" class="descubre-btn">DESCUBRE</a>
+            </div>
+
+            <!-- Tarjeta de Basketbol -->
+            <div class="deporte-card">
+                <img src="./img.categorias F-B-T-C-V/BASKETBOL.jfif" alt="baloncesto">
+                <div class="deporte baloncesto">
+                    <h3>BASKETBOL</h3>
+                </div>
+                <a href="baloncesto.html" class="descubre-btn">DESCUBRE</a>
+            </div>
+
+            <!-- Tarjeta de Natación -->
+            <div class="deporte-card">
+                <img src="./img.categorias F-B-T-C-V/NATACION.jfif" alt="natacion">
+                <div class="deporte natacion">
+                    <h3>NATACIÓN</h3>
+                </div>
+                <a href="natacion.html" class="descubre-btn">DESCUBRE</a>
+            </div>
+
+            <!-- Tarjeta de Tenis -->
+            <div class="deporte-card">
+                <img src="./img.categorias F-B-T-C-V/TENIS.jfif" alt="tenis">
+                <div class="deporte tenis">
+                    <h3>TENIS</h3>
+                </div>
+                <a href="tenis.html" class="descubre-btn">DESCUBRE</a>
+            </div>
+
+            <!-- Tarjeta de Ciclismo -->
+            <div class="deporte-card">
+                <img src="./img.categorias F-B-T-C-V/CICLISMO.jfif" alt="ciclismo">
+                <div class="deporte ciclismo">
+                    <h3>CICLISMO</h3>
+                </div>
+                <a href="ciclismo.html" class="descubre-btn">DESCUBRE</a>
+            </div>
+
+            <!-- Tarjeta de Atletismo -->
+            <div class="deporte-card">
+                <img src="./img.categorias F-B-T-C-V/ATLETISMO.jfif" alt="atletismo">
+                <div class="deporte atletismo">
+                    <h3>ATLETISMO</h3>
+                </div>
+                <a href="atletismo.html" class="descubre-btn">DESCUBRE</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
